@@ -5,11 +5,13 @@ import axios from 'axios';
 
 class App extends Component {
   makeWebRequest() {
-    const url = 'http://localhost:3000/api/messages';
-    axios.post(url, {
-      text: 'hello world'
+    const url = 'http://192.168.1.10:3000/api/messages';
+    axios.delete(url, {
+      text: 'hello'
     }).then(response => {
-      // This is where we'd normally handle the response, but it's not necessary for this simple demonstration.
+      // This is where we'd normally handle the response, but 
+      //it's not necessary for this simple demonstration.
+      console.log('response.data', response.data);
     })
   }
 
